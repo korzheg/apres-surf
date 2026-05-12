@@ -1,0 +1,873 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>APRES SURF ПЛЁС — 30.07—02.08</title>
+  <meta name="description" content="Премиальные водные выходные в Плёсе: четыре дня на воде, катание на доске, отдых и атмосферные вечера на берегу Волги." />
+  <style>
+    :root {
+      --cream: #fff1dc;
+      --cream-light: #fff8eb;
+      --paper: rgba(255, 248, 235, .88);
+      --ink: #073345;
+      --orange: #f05a18;
+      --gold: #e0a11f;
+      --line: rgba(221, 166, 105, .56);
+      --line-soft: rgba(221, 166, 105, .34);
+      --footer: #003f4f;
+      --shadow: 0 14px 30px rgba(72, 44, 15, .12);
+      --font: "Montserrat", "Arial Narrow", Arial, Helvetica, sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; background: var(--cream); }
+    body {
+      margin: 0;
+      min-width: 320px;
+      background: linear-gradient(180deg, var(--cream-light) 0%, var(--cream) 100%);
+      color: var(--ink);
+      font-family: var(--font);
+      overflow-x: hidden;
+    }
+
+    img, svg { display: block; max-width: 100%; }
+    a { color: inherit; text-decoration: none; }
+
+    .site {
+      width: min(100%, 1440px);
+      margin: 0 auto;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 8% 0%, rgba(255,255,255,.78), transparent 28%),
+        linear-gradient(180deg, var(--cream-light) 0%, var(--cream) 100%);
+    }
+
+    .mobile-topbar,
+    .mobile-menu { display: none; }
+
+    .hero {
+      position: relative;
+      min-height: clamp(360px, 30vw, 430px);
+      display: grid;
+      grid-template-columns: clamp(230px, 23vw, 318px) minmax(360px, 440px) minmax(220px, 1fr);
+      gap: clamp(18px, 2.2vw, 34px);
+      align-items: start;
+      padding: clamp(18px, 2.5vw, 38px) clamp(28px, 3.2vw, 50px) clamp(22px, 2.5vw, 38px);
+      overflow: hidden;
+      isolation: isolate;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -2;
+      background:
+        linear-gradient(90deg,
+          rgba(255, 248, 235, 1) 0%,
+          rgba(255, 248, 235, 1) 50%,
+          rgba(255, 248, 235, .92) 61%,
+          rgba(255, 248, 235, .30) 74%,
+          rgba(255, 248, 235, 0) 100%);
+    }
+
+    .hero__photo {
+      position: absolute;
+      inset: 0 0 0 auto;
+      z-index: -3;
+      width: min(53vw, 760px);
+      height: 100%;
+      overflow: hidden;
+    }
+
+    .hero__photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      -webkit-mask-image: linear-gradient(90deg, transparent 0%, rgba(0,0,0,.16) 10%, rgba(0,0,0,.82) 30%, #000 48%);
+      mask-image: linear-gradient(90deg, transparent 0%, rgba(0,0,0,.16) 10%, rgba(0,0,0,.82) 30%, #000 48%);
+    }
+
+    .hero__logo {
+      width: clamp(220px, 22vw, 306px);
+      aspect-ratio: 1;
+      object-fit: cover;
+      border-radius: 50%;
+      filter: drop-shadow(0 10px 18px rgba(25, 64, 70, .12));
+    }
+
+    .hero__copy {
+      position: relative;
+      z-index: 2;
+      max-width: 440px;
+      padding-top: 2px;
+    }
+
+    .hero__copy::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      inset: -12px -42px -18px -16px;
+      border-radius: 24px;
+      background: linear-gradient(90deg, rgba(255,248,235,.99) 0%, rgba(255,248,235,.96) 72%, rgba(255,248,235,0) 100%);
+    }
+
+    .line-art { display: none; }
+
+    .brand-lockup {
+      width: clamp(310px, 30vw, 420px);
+      height: auto;
+      margin: 0 auto 14px;
+    }
+
+    .date {
+      margin: 0 0 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: clamp(16px, 2vw, 24px);
+      color: var(--orange);
+      font-size: clamp(34px, 3.55vw, 54px);
+      line-height: .95;
+      font-weight: 900;
+      letter-spacing: .035em;
+      white-space: nowrap;
+    }
+
+    .date::before,
+    .date::after {
+      content: "";
+      flex: 0 0 clamp(54px, 7vw, 94px);
+      height: 5px;
+      border-radius: 999px;
+      background: var(--gold);
+    }
+
+    .kicker {
+      margin: 0 0 16px;
+      color: var(--ink);
+      font-size: clamp(18px, 1.55vw, 27px);
+      line-height: 1.12;
+      text-transform: uppercase;
+      font-weight: 900;
+      letter-spacing: .01em;
+    }
+
+    .lead {
+      margin: 0;
+      max-width: 530px;
+      color: #183c4a;
+      font-size: clamp(16px, 1.2vw, 21px);
+      line-height: 1.58;
+      font-weight: 800;
+      text-shadow: 0 1px 0 rgba(255,255,255,.55);
+    }
+
+    .section {
+      position: relative;
+      z-index: 2;
+      padding-inline: clamp(24px, 3.5vw, 52px);
+      background: var(--cream);
+    }
+
+    .section-title {
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: clamp(14px, 2.2vw, 34px);
+      color: var(--ink);
+      text-transform: uppercase;
+      text-align: center;
+      font-size: clamp(30px, 3.35vw, 54px);
+      line-height: .98;
+      font-weight: 900;
+      letter-spacing: .02em;
+    }
+
+    .section-title::before,
+    .section-title::after {
+      content: "";
+      width: clamp(50px, 8vw, 112px);
+      height: clamp(13px, 2vw, 25px);
+      flex: 0 0 clamp(50px, 8vw, 112px);
+      background: url("assets/orange-waves.png") center / contain no-repeat;
+    }
+
+    .program {
+      padding-top: clamp(24px, 3vw, 38px);
+      padding-bottom: clamp(18px, 2.2vw, 34px);
+      border-top: 1px solid var(--line-soft);
+    }
+
+    .program__grid {
+      margin-top: clamp(20px, 2.8vw, 34px);
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: clamp(14px, 1.6vw, 22px);
+      align-items: stretch;
+    }
+
+    .program-card {
+      min-width: 0;
+      min-height: 298px;
+      display: grid;
+      grid-template-columns: minmax(120px, 45%) 1fr;
+      gap: clamp(14px, 1.4vw, 20px);
+      padding: clamp(12px, 1.2vw, 18px);
+      border: 1px solid var(--line);
+      border-radius: clamp(18px, 1.8vw, 26px);
+      background: rgba(255, 248, 236, .68);
+      box-shadow: var(--shadow);
+    }
+
+    .program-card__image {
+      width: 100%;
+      height: 100%;
+      min-height: 260px;
+      object-fit: cover;
+      object-position: center;
+      border-radius: clamp(14px, 1.3vw, 22px);
+      align-self: stretch;
+    }
+
+    .program-card__body {
+      min-width: 0;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 2px 0 0;
+    }
+
+    .program-card__day {
+      margin: 0 0 clamp(16px, 1.6vw, 24px);
+      color: var(--ink);
+      font-size: clamp(17px, 1.32vw, 23px);
+      line-height: 1.03;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: .01em;
+    }
+
+    .program-card__day span {
+      display: block;
+      color: var(--orange);
+      margin-top: 2px;
+    }
+
+    .program-card__icon {
+      width: clamp(48px, 4.4vw, 72px);
+      height: clamp(42px, 4vw, 64px);
+      object-fit: contain;
+      margin: 0 0 clamp(16px, 1.4vw, 22px);
+    }
+
+    .program-card h3 {
+      margin: 0 0 clamp(14px, 1.1vw, 18px);
+      color: var(--ink);
+      font-size: clamp(17px, 1.28vw, 22px);
+      line-height: 1.14;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: .005em;
+    }
+
+    .program-card p {
+      margin: 0;
+      color: #1f4050;
+      font-size: clamp(14px, 1vw, 18px);
+      line-height: 1.44;
+      font-weight: 800;
+    }
+
+    .swipe-hint { display: none; }
+
+    .includes {
+      padding-top: clamp(16px, 2vw, 28px);
+      padding-bottom: clamp(24px, 2.8vw, 42px);
+    }
+
+    .includes__grid {
+      margin-top: clamp(18px, 2.4vw, 30px);
+      display: grid;
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      border: 1px solid var(--line);
+      background: rgba(255, 246, 230, .28);
+    }
+
+    .include-item {
+      min-height: clamp(112px, 9.5vw, 150px);
+      padding: clamp(12px, 1.5vw, 22px) 12px;
+      display: grid;
+      align-content: center;
+      justify-items: center;
+      text-align: center;
+      border-right: 1px solid var(--line);
+    }
+
+    .include-item:last-child { border-right: 0; }
+
+    .include-item img {
+      width: clamp(48px, 5vw, 76px);
+      height: clamp(40px, 4.5vw, 68px);
+      object-fit: contain;
+      margin-bottom: clamp(6px, .9vw, 12px);
+    }
+
+    .include-item strong {
+      color: var(--ink);
+      font-size: clamp(12px, 1.1vw, 18px);
+      line-height: 1.08;
+      font-weight: 900;
+      letter-spacing: .005em;
+      text-transform: uppercase;
+    }
+
+    .footer {
+      margin: 0;
+      color: #fff6e8;
+      background: var(--footer);
+    }
+
+    .footer__wave {
+      width: 100%;
+      height: clamp(44px, 5vw, 74px);
+      margin-bottom: -1px;
+      background: var(--cream);
+    }
+
+    .footer__wave path { fill: var(--footer); }
+
+    .footer__content {
+      min-height: clamp(88px, 9vw, 130px);
+      padding: clamp(14px, 1.8vw, 28px) clamp(28px, 4vw, 60px) clamp(20px, 2.5vw, 36px);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      background:
+        radial-gradient(80% 64px at 55% 92%, rgba(255,255,255,.09), transparent 55%),
+        var(--footer);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .footer__content::before {
+      content: "";
+      position: absolute;
+      left: 37%;
+      top: 24px;
+      width: min(520px, 38vw);
+      height: 54px;
+      background: url("assets/waves-light.png") center / contain no-repeat;
+      opacity: .16;
+      pointer-events: none;
+    }
+
+    .footer__brand {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      position: relative;
+      z-index: 1;
+      min-width: 0;
+    }
+
+    .footer__logo { width: clamp(170px, 17vw, 250px); height: auto; }
+    .footer__sep { width: 1px; align-self: stretch; background: rgba(255,246,232,.7); }
+    .footer__subtitle { font-size: clamp(17px, 1.5vw, 24px); line-height: 1; white-space: nowrap; }
+
+    .socials {
+      display: flex;
+      gap: clamp(12px, 1.4vw, 22px);
+      position: relative;
+      z-index: 1;
+    }
+
+    .socials a {
+      width: clamp(48px, 4.8vw, 70px);
+      height: clamp(48px, 4.8vw, 70px);
+      border: 2px solid rgba(255,246,232,.92);
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      transition: transform .18s ease, background .18s ease;
+    }
+
+    .socials a:hover { transform: translateY(-2px); background: rgba(255,255,255,.08); }
+    .socials svg { width: 55%; height: 55%; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+    @media (max-width: 1180px) and (min-width: 761px) {
+      .hero {
+        grid-template-columns: clamp(190px, 22vw, 260px) minmax(320px, 395px) 1fr;
+        min-height: 360px;
+      }
+
+      .hero__photo { width: 50vw; }
+      .program__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .program-card { min-height: 282px; }
+      .program-card__image { min-height: 248px; }
+      .includes__grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .include-item { border-bottom: 1px solid var(--line); }
+      .include-item:nth-child(3n) { border-right: 0; }
+      .include-item:nth-last-child(-n+3) { border-bottom: 0; }
+    }
+
+    @media (max-width: 760px) {
+      .site {
+        width: 100%;
+        max-width: none;
+        margin: 0;
+        border-radius: 0;
+      }
+
+      .mobile-topbar,
+      .mobile-menu { display: none !important; }
+
+      .hero {
+        display: block;
+        min-height: clamp(360px, 82vw, 560px);
+        padding: clamp(24px, 5vw, 42px) clamp(20px, 5vw, 42px) clamp(22px, 5vw, 42px);
+      }
+
+      .hero::before {
+        background:
+          linear-gradient(90deg,
+            rgba(255, 248, 235, 1) 0%,
+            rgba(255, 248, 235, .99) 39%,
+            rgba(255, 248, 235, .72) 54%,
+            rgba(255, 248, 235, .05) 83%,
+            rgba(255, 248, 235, 0) 100%),
+          linear-gradient(180deg, transparent 72%, var(--cream) 100%);
+      }
+
+      .hero__photo {
+        width: 72%;
+        height: 100%;
+      }
+
+      .hero__photo img {
+        object-position: 58% center;
+        -webkit-mask-image:
+          linear-gradient(90deg, transparent 0%, rgba(0,0,0,.22) 11%, rgba(0,0,0,.85) 34%, #000 55%),
+          linear-gradient(180deg, #000 0%, #000 84%, transparent 100%);
+        mask-image:
+          linear-gradient(90deg, transparent 0%, rgba(0,0,0,.22) 11%, rgba(0,0,0,.85) 34%, #000 55%),
+          linear-gradient(180deg, #000 0%, #000 84%, transparent 100%);
+        -webkit-mask-composite: source-in;
+        mask-composite: intersect;
+      }
+
+      .hero__logo { display: none; }
+
+      .hero__copy {
+        max-width: min(58vw, 380px);
+        padding-top: 0;
+      }
+
+      .hero__copy::before {
+        inset: -10px -28px -14px -10px;
+        background: linear-gradient(90deg, rgba(255,248,235,.99) 0%, rgba(255,248,235,.93) 80%, rgba(255,248,235,0) 100%);
+      }
+
+      .line-art {
+        display: block;
+        width: clamp(160px, 46vw, 290px);
+        margin: 0 0 clamp(12px, 3vw, 24px) 0;
+      }
+
+      .brand-lockup {
+        width: clamp(210px, 58vw, 360px);
+        margin: 0 0 clamp(12px, 3vw, 22px);
+      }
+
+      .date {
+        justify-content: flex-start;
+        gap: 0;
+        margin-bottom: clamp(14px, 3vw, 24px);
+        font-size: clamp(26px, 7.2vw, 48px);
+        letter-spacing: .02em;
+      }
+
+      .date::before,
+      .date::after { display: none; }
+
+      .kicker {
+        max-width: 100%;
+        margin-bottom: clamp(14px, 3.2vw, 24px);
+        font-size: clamp(14px, 3.8vw, 26px);
+        line-height: 1.18;
+        text-align: left;
+      }
+
+      .lead {
+        max-width: 100%;
+        font-size: clamp(12px, 3.15vw, 20px);
+        line-height: 1.62;
+        font-weight: 800;
+      }
+
+      .section {
+        padding-inline: 0;
+      }
+
+      .section-title {
+        font-size: clamp(28px, 7.2vw, 52px);
+        gap: clamp(12px, 3.6vw, 24px);
+      }
+
+      .section-title::before,
+      .section-title::after {
+        width: clamp(40px, 13vw, 92px);
+        flex-basis: clamp(40px, 13vw, 92px);
+        height: clamp(12px, 3.5vw, 22px);
+      }
+
+      .program {
+        padding-top: clamp(24px, 6vw, 44px);
+        padding-bottom: clamp(16px, 4vw, 30px);
+      }
+
+      .program__grid {
+        margin-top: clamp(18px, 5vw, 34px);
+        display: grid;
+        grid-auto-flow: column;
+        grid-auto-columns: clamp(318px, 86vw, 650px);
+        grid-template-columns: none;
+        gap: clamp(12px, 3vw, 22px);
+        overflow-x: auto;
+        overscroll-behavior-inline: contain;
+        scroll-snap-type: x mandatory;
+        scrollbar-width: none;
+        padding: 0 clamp(18px, 5vw, 42px) 8px;
+      }
+
+      .program__grid::-webkit-scrollbar { display: none; }
+
+      .program-card {
+        scroll-snap-align: start;
+        min-height: 0;
+        grid-template-columns: minmax(136px, 44%) minmax(0, 1fr);
+        grid-template-rows: auto auto auto auto;
+        align-items: start;
+        gap: clamp(12px, 3vw, 22px);
+        padding: clamp(14px, 4vw, 26px);
+        border-radius: clamp(22px, 5vw, 38px);
+        box-shadow: 0 12px 24px rgba(72, 44, 15, .10);
+        background: rgba(255, 248, 236, .72);
+      }
+
+      .program-card__image {
+        grid-column: 1;
+        grid-row: 2 / 5;
+        width: 100%;
+        height: clamp(146px, 35vw, 248px);
+        min-height: 0;
+        aspect-ratio: auto;
+        align-self: start;
+        object-fit: cover;
+        border-radius: clamp(14px, 3.5vw, 24px);
+      }
+
+      .program-card__body { display: contents; }
+
+      .program-card__day {
+        grid-column: 1 / -1;
+        grid-row: 1;
+        margin: 0;
+        font-size: clamp(18px, 4.7vw, 31px);
+        line-height: 1.05;
+        white-space: nowrap;
+      }
+
+      .program-card__day span {
+        display: inline;
+        margin-left: .25em;
+      }
+
+      .program-card__icon {
+        grid-column: 2;
+        grid-row: 2;
+        width: clamp(48px, 13vw, 90px);
+        height: clamp(40px, 11vw, 78px);
+        margin: 0 0 clamp(8px, 2vw, 16px);
+      }
+
+      .program-card h3 {
+        grid-column: 2;
+        grid-row: 3;
+        margin: 0 0 clamp(10px, 2.5vw, 18px);
+        font-size: clamp(17px, 4.4vw, 30px);
+        line-height: 1.12;
+      }
+
+      .program-card p {
+        grid-column: 2;
+        grid-row: 4;
+        font-size: clamp(12px, 3.15vw, 20px);
+        line-height: 1.48;
+      }
+
+      .swipe-hint {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: clamp(9px, 2.5vw, 16px);
+        min-height: 34px;
+        margin: 4px 0 clamp(10px, 2vw, 18px);
+        color: var(--ink);
+        font-size: clamp(10px, 2.5vw, 16px);
+        font-weight: 900;
+      }
+
+      .dots { display: flex; gap: 8px; align-items: center; }
+      .dot { width: 8px; height: 8px; border-radius: 50%; background: rgba(204,163,112,.55); }
+      .dot.is-active { background: var(--orange); }
+      .hint-arrow { width: clamp(18px, 4vw, 30px); transform: rotate(180deg); }
+      .hint-hand { font-size: clamp(20px, 5vw, 34px); transform: translateY(1px); }
+
+      .includes {
+        padding-top: clamp(12px, 3vw, 24px);
+        padding-bottom: clamp(18px, 5vw, 40px);
+        padding-inline: clamp(18px, 5vw, 42px);
+      }
+
+      .includes__grid {
+        margin-top: clamp(18px, 5vw, 34px);
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        border: 1px solid var(--line);
+      }
+
+      .include-item {
+        min-height: clamp(78px, 18vw, 132px);
+        padding: clamp(8px, 2vw, 14px) 6px;
+        border-right: 1px solid var(--line);
+        border-bottom: 1px solid var(--line);
+      }
+
+      .include-item:nth-child(4) { border-right: 0; }
+      .include-item:nth-child(5) { grid-column: 1 / 3; }
+      .include-item:nth-child(6) { grid-column: 3 / 5; border-right: 0; }
+      .include-item:nth-child(n+5) { border-bottom: 0; }
+
+      .include-item img {
+        width: clamp(42px, 12vw, 82px);
+        height: clamp(34px, 9vw, 66px);
+        margin-bottom: clamp(3px, 1.2vw, 8px);
+      }
+
+      .include-item strong {
+        font-size: clamp(10px, 2.8vw, 17px);
+        line-height: 1.05;
+      }
+
+      .footer__wave { height: clamp(38px, 8vw, 64px); }
+
+      .footer__content {
+        min-height: clamp(98px, 22vw, 150px);
+        padding: clamp(16px, 4vw, 28px) clamp(22px, 5vw, 44px) clamp(20px, 5vw, 36px);
+        align-items: end;
+      }
+
+      .footer__content::before { display: none; }
+      .footer__brand { display: block; }
+      .footer__logo { width: clamp(160px, 40vw, 280px); }
+      .footer__sep { display: none; }
+      .footer__subtitle { margin-top: -11%; padding-left: 28%; font-size: clamp(12px, 3vw, 20px); }
+      .socials { gap: clamp(10px, 3vw, 20px); }
+      .socials a { width: clamp(48px, 12vw, 78px); height: clamp(48px, 12vw, 78px); }
+    }
+
+    @media (max-width: 374px) {
+      .hero__copy { max-width: 220px; }
+      .brand-lockup { width: 205px; }
+      .program__grid { grid-auto-columns: clamp(292px, 88vw, 330px); padding-inline: 14px; }
+      .program-card { grid-template-columns: 128px 1fr; padding: 12px; }
+      .program-card__image { height: 140px; }
+      .program-card__day { font-size: 17px; }
+      .program-card h3 { font-size: 16px; }
+      .program-card p { font-size: 11px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="site">
+    <div class="mobile-topbar" aria-hidden="true">
+      <button class="burger" type="button" aria-label="Открыть меню" aria-controls="mobile-menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <a class="profile" href="#footer" aria-label="Контакты"></a>
+    </div>
+
+    <nav class="mobile-menu" id="mobile-menu" aria-label="Мобильное меню">
+      <a href="#program">Программа</a>
+      <a href="#includes">Что входит</a>
+      <a href="#footer">Контакты</a>
+    </nav>
+
+    <section class="hero" aria-label="APRES SURF ПЛЁС">
+      <picture class="hero__photo" aria-hidden="true">
+        <source media="(max-width: 760px)" srcset="assets/hero-mobile.png">
+        <img src="assets/hero-desktop.png" alt="">
+      </picture>
+
+      <img class="hero__logo" src="assets/round-logo.jpg" alt="APRES SURF ПЛЁС, 30.07—02.08" />
+
+      <div class="hero__copy">
+        <img class="line-art" src="assets/ples-line-art.png" alt="" />
+        <img class="brand-lockup" src="assets/brand-lockup.png" alt="APRES SURF ПЛЁС" />
+
+        <div class="date">30.07—02.08</div>
+        <p class="kicker">Премиальные водные выходные в Плёсе</p>
+        <p class="lead">Четыре дня на воде, в кругу своих людей.<br>Катание на доске, отдых, забота о себе и атмосферные вечера на берегу Волги.</p>
+      </div>
+    </section>
+
+    <section class="section program" id="program">
+      <h2 class="section-title">Программа</h2>
+
+      <div class="program__grid" id="programGrid" aria-label="Карточки программы">
+        <article class="program-card">
+          <img class="program-card__image" src="assets/program-day-1.png" alt="Закат на деревянном причале у воды" />
+          <div class="program-card__body">
+            <div class="program-card__day">День 1 <span>— 30.07</span></div>
+            <img class="program-card__icon" src="assets/icon-wave.png" alt="" />
+            <h3>Заезд и знакомство</h3>
+            <p>Заезд, размещение, приветственный напиток, ужин и знакомство с группой.</p>
+          </div>
+        </article>
+
+        <article class="program-card">
+          <img class="program-card__image" src="assets/program-day-2.png" alt="Катание на wakesurf на закате" />
+          <div class="program-card__body">
+            <div class="program-card__day">День 2 <span>— 31.07</span></div>
+            <img class="program-card__icon" src="assets/icon-surfer.png" alt="" />
+            <h3>День базовой техники</h3>
+            <p>Разминка, тренировки на воде, работа над техникой, обед и видеоразбор.</p>
+          </div>
+        </article>
+
+        <article class="program-card">
+          <img class="program-card__image" src="assets/program-day-3.png" alt="Закатный ужин у озера" />
+          <div class="program-card__body">
+            <div class="program-card__day">День 3 <span>— 01.08</span></div>
+            <img class="program-card__icon" src="assets/icon-sunset.png" alt="" />
+            <h3>День прогресса</h3>
+            <p>Тренировки на воде, закрепление навыков, закатное катание и финальный ужин.</p>
+          </div>
+        </article>
+
+        <article class="program-card">
+          <img class="program-card__image" src="assets/program-day-4.png" alt="Плёс на закате с видом на церковь" />
+          <div class="program-card__body">
+            <div class="program-card__day">День 4 <span>— 02.08</span></div>
+            <img class="program-card__icon" src="assets/icon-branch.png" alt="" />
+            <h3>Спокойное завершение</h3>
+            <p>Лёгкая зарядка, завтрак, финальные фотографии и выезд.</p>
+          </div>
+        </article>
+      </div>
+
+      <div class="swipe-hint" aria-hidden="true">
+        <div class="dots" id="dots">
+          <span class="dot is-active"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+        <img class="hint-arrow" src="assets/arrow_simple.svg" alt="">
+        <span class="hint-hand">☝</span>
+        <span>Свайпайте для просмотра программы</span>
+      </div>
+    </section>
+
+    <section class="section includes" id="includes">
+      <h2 class="section-title">Что входит</h2>
+
+      <div class="includes__grid">
+        <div class="include-item">
+          <img src="assets/icon-wave.png" alt="">
+          <strong>Wake-сессии<br>с тренером</strong>
+        </div>
+
+        <div class="include-item">
+          <img src="assets/icon-bed.png" alt="">
+          <strong>Проживание<br>премиум-класса</strong>
+        </div>
+
+        <div class="include-item">
+          <img src="assets/icon-food.png" alt="">
+          <strong>Питание<br>3 раза в день</strong>
+        </div>
+
+        <div class="include-item">
+          <img src="assets/icon-lotus.png" alt="">
+          <strong>Забота<br>и восстановление</strong>
+        </div>
+
+        <div class="include-item">
+          <img src="assets/icon-van.png" alt="">
+          <strong>Группа<br>до 8 человек</strong>
+        </div>
+
+        <div class="include-item">
+          <img src="assets/icon-group.png" alt="">
+          <strong>История города<br>и атмосфера Плёса</strong>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer" id="footer">
+      <svg class="footer__wave" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0,42 C90,70 170,12 260,40 C350,68 430,14 520,42 C620,72 710,10 820,40 C915,70 1005,18 1100,42 C1220,72 1320,14 1440,42 L1440,120 L0,120 Z" />
+      </svg>
+
+      <div class="footer__content">
+        <div class="footer__brand">
+          <img class="footer__logo" src="assets/footer-logo.png" alt="APRES SURF ПЛЁС">
+          <span class="footer__sep" aria-hidden="true"></span>
+          <span class="footer__subtitle">wake weekend</span>
+        </div>
+
+        <div class="socials" aria-label="Социальные сети">
+          <a href="https://t.me/s/plioshiddenrussia?before=3634" target="_blank" rel="noopener" aria-label="Telegram">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M21.5 3.5 3 10.8l7 2.1 2.6 7.6 3.2-5 4.6-11.2z"></path>
+              <path d="m10 12.9 6.5-5.1"></path>
+            </svg>
+          </a>
+          <a href="https://www.instagram.com/gorodples/" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <rect x="3.5" y="3.5" width="17" height="17" rx="5"></rect>
+              <circle cx="12" cy="12" r="4"></circle>
+              <circle cx="17.5" cy="6.8" r=".8" fill="currentColor" stroke="none"></circle>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    const grid = document.querySelector('#programGrid');
+    const dots = [...document.querySelectorAll('.dot')];
+
+    function updateDots() {
+      if (!grid || !dots.length) return;
+      const card = grid.querySelector('.program-card');
+      if (!card) return;
+      const gap = parseFloat(getComputedStyle(grid).columnGap) || 0;
+      const step = card.getBoundingClientRect().width + gap;
+      const active = Math.max(0, Math.min(dots.length - 1, Math.round(grid.scrollLeft / step)));
+      dots.forEach((dot, i) => dot.classList.toggle('is-active', i === active));
+    }
+
+    grid?.addEventListener('scroll', () => requestAnimationFrame(updateDots), { passive: true });
+    window.addEventListener('resize', updateDots);
+    updateDots();
+  </script>
+</body>
+</html>
