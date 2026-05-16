@@ -1,0 +1,1828 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>APRES SURF ПЛЁС — 30.07—02.08</title>
+  <meta name="description" content="Премиальные водные выходные в Плёсе: четыре дня на воде, wake surf, отдых и атмосферные вечера на берегу Волги." />
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="APRES SURF ПЛЁС — 30.07—02.08">
+  <meta property="og:description" content="Премиальные водные выходные в Плёсе: wake surf, отдых и атмосферные вечера на берегу Волги.">
+  <meta property="og:image" content="assets/link-preview.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="assets/link-preview.png">
+  <link rel="shortcut icon" href="assets/favicon.ico">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="apple-touch-icon" href="assets/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --cream: #FFF3E4;
+      --cream-soft: #FFF8EE;
+      --paper: rgba(255, 248, 238, .82);
+      --ink: #082F44;
+      --ink-soft: #21475A;
+      --orange: #F15A24;
+      --orange-soft: rgba(241, 90, 36, .12);
+      --gold: #D99B26;
+      --footer: #064052;
+      --line: rgba(8, 47, 68, .12);
+      --line-warm: rgba(241, 90, 36, .24);
+      --shadow: 0 24px 64px rgba(70, 45, 20, .12);
+      --shadow-soft: 0 14px 30px rgba(70, 45, 20, .075);
+      --sans: "Montserrat", Arial, Helvetica, sans-serif;
+      --serif: Georgia, "Times New Roman", serif;
+      --container: min(calc(100% - clamp(40px, 6vw, 104px)), 1480px);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; background: var(--cream); }
+    body {
+      margin: 0;
+      min-width: 320px;
+      overflow-x: hidden;
+      color: var(--ink);
+      background: var(--cream);
+      font-family: var(--sans);
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    body.modal-open { overflow: hidden; }
+    img, svg { display: block; max-width: 100%; }
+    a { color: inherit; text-decoration: none; }
+    button { font: inherit; color: inherit; }
+
+    .site {
+      width: 100%;
+      overflow: hidden;
+      background:
+        radial-gradient(1000px 520px at 7% 0%, rgba(255,255,255,.78), transparent 66%),
+        radial-gradient(800px 460px at 94% 16%, rgba(255, 214, 171, .28), transparent 70%),
+        linear-gradient(180deg, var(--cream-soft) 0%, var(--cream) 100%);
+    }
+
+    .container {
+      width: var(--container);
+      margin-inline: auto;
+    }
+
+    .hero {
+      position: relative;
+      padding: clamp(26px, 4vw, 52px) 0 clamp(46px, 5vw, 78px);
+      isolation: isolate;
+      background:
+        radial-gradient(720px 360px at 18% 0%, rgba(255,255,255,.92), transparent 72%),
+        radial-gradient(860px 420px at 86% 10%, rgba(241, 90, 36, .11), transparent 70%),
+        var(--cream-soft);
+    }
+
+    .hero::before,
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset-inline: 0;
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    .hero::before {
+      top: 0;
+      height: 100%;
+      background-image:
+        linear-gradient(rgba(241, 90, 36, .05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(241, 90, 36, .04) 1px, transparent 1px);
+      background-size: 64px 64px;
+      mask-image: radial-gradient(560px 380px at 5% 7%, #000 0, transparent 76%);
+    }
+
+    .hero::after {
+      bottom: 0;
+      height: 96px;
+      background: linear-gradient(180deg, rgba(255, 243, 228, 0), var(--cream));
+    }
+
+    .hero__inner {
+      position: relative;
+      z-index: 1;
+      width: var(--container);
+      min-height: clamp(610px, 52vw, 760px);
+      margin-inline: auto;
+      display: grid;
+      grid-template-columns: minmax(380px, .8fr) minmax(520px, 1fr);
+      align-items: stretch;
+      gap: 0;
+      overflow: hidden;
+      border: 1px solid rgba(241, 90, 36, .18);
+      border-radius: clamp(34px, 3.4vw, 52px);
+      background:
+        linear-gradient(180deg, rgba(255,255,255,.46), rgba(255,248,238,.72)),
+        var(--cream-soft);
+      box-shadow: var(--shadow);
+    }
+
+    .hero__inner::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: clamp(26px, 3vw, 40px);
+      z-index: 4;
+      background: url("data:image/svg+xml,%3Csvg viewBox='0 0 1440 42' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 21c46-11 92-11 138 0s92 11 138 0 92-11 138 0 92 11 138 0 92-11 138 0 92 11 138 0 92-11 138 0 92 11 138 0 92-11 138 0' fill='none' stroke='%23064052' stroke-width='3' stroke-linecap='round' opacity='.38'/%3E%3Cpath d='M0 31c46-11 92-11 138 0s92 11 138 0 92-11 138 0 92 11 138 0 92-11 138 0 92 11 138 0 92-11 138 0 92 11 138 0 92-11 138 0' fill='none' stroke='%23F15A24' stroke-width='2.2' stroke-linecap='round' opacity='.55'/%3E%3C/svg%3E") center bottom / cover no-repeat;
+      pointer-events: none;
+    }
+
+    .hero__copy {
+      position: relative;
+      z-index: 3;
+      min-width: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      text-align: left;
+      padding: clamp(34px, 4.5vw, 72px) clamp(28px, 4vw, 62px) clamp(56px, 6vw, 84px);
+      background:
+        linear-gradient(90deg, rgba(255,248,238,.98) 0%, rgba(255,248,238,.93) 74%, rgba(255,248,238,.25) 100%);
+    }
+
+    .hero__logo {
+      width: clamp(166px, 14vw, 240px);
+      height: auto;
+      margin: 0 0 clamp(18px, 2.2vw, 28px);
+      border-radius: 999px;
+      border: clamp(5px, .5vw, 8px) solid rgba(255, 248, 238, .96);
+      box-shadow: 0 20px 42px rgba(8, 47, 68, .14);
+      background: var(--cream-soft);
+    }
+
+    .hero__title {
+      width: min(100%, clamp(340px, 32vw, 560px));
+      margin: 0 auto;
+      align-self: center;
+      line-height: 0;
+    }
+
+    .hero__title img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      filter: drop-shadow(0 8px 18px rgba(8, 47, 68, .08));
+    }
+
+    .hero__date {
+      display: inline-flex;
+      align-items: center;
+      gap: clamp(14px, 1.6vw, 24px);
+      margin: clamp(20px, 2vw, 28px) 0 clamp(14px, 1.6vw, 22px);
+      color: var(--orange);
+      font-size: clamp(30px, 3vw, 52px);
+      line-height: .95;
+      font-weight: 900;
+      letter-spacing: .03em;
+      white-space: nowrap;
+    }
+
+    .hero__date::before,
+    .hero__date::after {
+      content: "";
+      width: clamp(34px, 4vw, 70px);
+      height: 4px;
+      border-radius: 999px;
+      background: currentColor;
+      opacity: .88;
+    }
+
+    .hero__kicker {
+      max-width: 560px;
+      margin: 0 0 clamp(14px, 1.7vw, 24px);
+      color: var(--ink);
+      font-size: clamp(18px, 1.42vw, 25px);
+      line-height: 1.22;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+    }
+
+    .hero__lead {
+      max-width: 560px;
+      margin: 0;
+      color: var(--ink-soft);
+      font-size: clamp(16px, 1.18vw, 20px);
+      line-height: 1.68;
+      font-weight: 600;
+    }
+
+    .hero__lead strong { font-weight: 900; }
+
+    .hero__visual {
+      position: relative;
+      min-width: 0;
+      height: 100%;
+      overflow: hidden;
+      background: #F7D7A4;
+    }
+
+    .hero__visual::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+      pointer-events: none;
+      background:
+        linear-gradient(90deg, rgba(255,248,238,.72) 0%, rgba(255,248,238,.16) 19%, rgba(255,248,238,0) 35%),
+        linear-gradient(0deg, rgba(255,248,238,0) 70%, rgba(255,248,238,.06) 100%);
+    }
+
+    .hero__visual::after {
+      content: "";
+      position: absolute;
+      width: clamp(92px, 10vw, 152px);
+      height: clamp(32px, 3.5vw, 54px);
+      top: clamp(18px, 2.5vw, 28px);
+      right: clamp(24px, 3vw, 46px);
+      z-index: 3;
+      opacity: .74;
+      pointer-events: none;
+      background: url("data:image/svg+xml,%3Csvg viewBox='0 0 150 44' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23F15A24' stroke-width='4' stroke-linecap='round'%3E%3Cpath d='M4 10c12 8 24 8 36 0s24-8 36 0 24 8 36 0 24-8 36 0'/%3E%3Cpath d='M18 24c10 7 20 7 30 0s20-7 30 0 20 7 30 0 20-7 30 0'/%3E%3Cpath d='M4 38c12 8 24 8 36 0s24-8 36 0 24 8 36 0 24-8 36 0'/%3E%3C/g%3E%3C/svg%3E") center / contain no-repeat;
+    }
+
+    .hero__photo {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      min-height: clamp(610px, 52vw, 760px);
+      overflow: hidden;
+      background: #F7D7A4;
+    }
+
+    .hero__photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 56% 52%;
+      transform: scale(1.01);
+    }
+
+    .section {
+      position: relative;
+      padding-block: clamp(56px, 6vw, 92px);
+      background: var(--cream);
+    }
+
+    .section--program {
+      padding-top: clamp(42px, 5.2vw, 78px);
+      border-top: 1px solid rgba(241, 90, 36, .12);
+    }
+
+    .section-title {
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: clamp(14px, 2vw, 32px);
+      color: var(--ink);
+      text-align: center;
+      text-transform: uppercase;
+      font-size: clamp(34px, 4vw, 66px);
+      line-height: .95;
+      font-weight: 900;
+      letter-spacing: .035em;
+    }
+
+    .title-wave {
+      width: clamp(64px, 8vw, 126px);
+      flex: 0 0 auto;
+      color: var(--orange);
+      opacity: .62;
+    }
+
+    .section-title__text { min-width: 0; }
+
+    .program__grid {
+      margin-top: clamp(30px, 4vw, 54px);
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: clamp(18px, 1.8vw, 28px);
+      align-items: stretch;
+    }
+
+    .program-card {
+      min-width: 0;
+      appearance: none;
+      border: 1px solid var(--line-warm);
+      text-align: left;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      padding: clamp(14px, 1.2vw, 20px);
+      border-radius: clamp(24px, 2.2vw, 36px);
+      background: rgba(255, 248, 238, .72);
+      box-shadow: var(--shadow-soft);
+      backdrop-filter: blur(2px);
+      transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease, background .2s ease;
+    }
+
+    .program-card:hover,
+    .program-card:focus-visible {
+      transform: translateY(-4px);
+      border-color: rgba(241, 90, 36, .42);
+      background: rgba(255, 248, 238, .92);
+      box-shadow: 0 22px 46px rgba(70, 45, 20, .13);
+      outline: none;
+    }
+
+    .program-card__image {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      object-position: center;
+      border-radius: clamp(18px, 1.6vw, 28px);
+      box-shadow: 0 12px 24px rgba(41, 26, 12, .08);
+    }
+
+    .program-card__body {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      padding: clamp(17px, 1.5vw, 24px) 4px 4px;
+    }
+
+    .program-card__head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      margin-bottom: clamp(14px, 1.4vw, 22px);
+    }
+
+    .program-card__day {
+      color: var(--ink);
+      font-size: clamp(17px, 1.45vw, 25px);
+      line-height: 1.03;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: .02em;
+    }
+
+    .program-card__day span {
+      display: block;
+      margin-top: 4px;
+      color: var(--orange);
+    }
+
+    .program-card__icon {
+      width: clamp(52px, 4.8vw, 78px);
+      height: clamp(48px, 4.4vw, 72px);
+      object-fit: contain;
+      flex: 0 0 auto;
+      filter: drop-shadow(0 4px 8px rgba(8, 47, 68, .05));
+    }
+
+    .program-card h3 {
+      margin: 0 0 clamp(12px, 1vw, 16px);
+      color: var(--ink);
+      font-size: clamp(18px, 1.38vw, 24px);
+      line-height: 1.12;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: .01em;
+    }
+
+    .program-card p {
+      margin: 0;
+      color: var(--ink-soft);
+      font-size: clamp(14px, 1.02vw, 17px);
+      line-height: 1.58;
+      font-weight: 600;
+    }
+
+    .program-card__more {
+      width: max-content;
+      margin-top: auto;
+      padding: 10px 14px;
+      border-radius: 999px;
+      color: var(--orange);
+      background: rgba(241, 90, 36, .10);
+      font-size: 13px;
+      line-height: 1;
+      font-weight: 900;
+      letter-spacing: .05em;
+      text-transform: uppercase;
+    }
+
+    .program-card p + .program-card__more { margin-top: clamp(18px, 1.4vw, 24px); }
+
+    .swipe-hint { display: none; }
+
+    .section--includes {
+      padding-top: clamp(42px, 4.8vw, 76px);
+      padding-bottom: clamp(56px, 5vw, 82px);
+      background:
+        radial-gradient(700px 280px at 50% 0%, rgba(255,255,255,.55), transparent 74%),
+        var(--cream);
+    }
+
+    .includes__grid {
+      margin-top: clamp(30px, 4vw, 54px);
+      display: grid;
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      gap: clamp(12px, 1.35vw, 20px);
+    }
+
+    .include-item {
+      min-height: clamp(160px, 13vw, 220px);
+      padding: clamp(18px, 1.6vw, 28px) clamp(10px, 1.2vw, 20px);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      border: 1px solid var(--line-warm);
+      border-radius: clamp(22px, 2vw, 32px);
+      background: rgba(255, 248, 238, .66);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .include-item img {
+      width: clamp(58px, 5.4vw, 88px);
+      height: clamp(54px, 5vw, 82px);
+      object-fit: contain;
+      margin-bottom: clamp(12px, 1.2vw, 18px);
+      filter: drop-shadow(0 5px 8px rgba(8, 47, 68, .04));
+    }
+
+    .include-item strong {
+      color: var(--ink);
+      font-size: clamp(13px, 1.05vw, 18px);
+      line-height: 1.18;
+      font-weight: 900;
+      letter-spacing: .015em;
+      text-transform: uppercase;
+    }
+
+    .section--calculator {
+      padding-top: clamp(42px, 5vw, 78px);
+      padding-bottom: clamp(64px, 7vw, 112px);
+      background:
+        radial-gradient(760px 360px at 20% 10%, rgba(255,255,255,.62), transparent 72%),
+        radial-gradient(680px 340px at 88% 82%, rgba(241, 90, 36, .10), transparent 72%),
+        var(--cream);
+    }
+
+    .calculator {
+      position: relative;
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: minmax(310px, .86fr) minmax(420px, 1fr);
+      gap: clamp(24px, 4vw, 62px);
+      align-items: center;
+      padding: clamp(24px, 3vw, 46px);
+      border: 1px solid rgba(241, 90, 36, .22);
+      border-radius: clamp(30px, 3.3vw, 54px);
+      background:
+        linear-gradient(135deg, rgba(255, 248, 238, .94), rgba(255, 243, 228, .74)),
+        var(--cream-soft);
+      box-shadow: var(--shadow);
+    }
+
+    .calculator::before {
+      content: "";
+      position: absolute;
+      width: 330px;
+      height: 330px;
+      right: -110px;
+      top: -150px;
+      border-radius: 999px;
+      background: rgba(241, 90, 36, .10);
+      pointer-events: none;
+    }
+
+    .calculator__copy { position: relative; z-index: 1; }
+
+    .calculator__eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin: 0 0 16px;
+      color: var(--orange);
+      font-size: clamp(13px, 1vw, 16px);
+      line-height: 1;
+      font-weight: 900;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    .calculator__eyebrow::before {
+      content: "";
+      width: 34px;
+      height: 3px;
+      border-radius: 999px;
+      background: currentColor;
+    }
+
+    .calculator__title {
+      margin: 0 0 clamp(14px, 1.6vw, 22px);
+      color: var(--ink);
+      font-size: clamp(32px, 3.2vw, 56px);
+      line-height: .98;
+      font-weight: 900;
+      letter-spacing: .025em;
+      text-transform: uppercase;
+    }
+
+    .calculator__text {
+      max-width: 560px;
+      margin: 0;
+      color: var(--ink-soft);
+      font-size: clamp(15px, 1.15vw, 19px);
+      line-height: 1.68;
+      font-weight: 600;
+    }
+
+    .price-calc {
+      position: relative;
+      z-index: 1;
+      padding: clamp(18px, 2vw, 30px);
+      border: 1px solid rgba(8, 47, 68, .10);
+      border-radius: clamp(24px, 2.4vw, 36px);
+      background: rgba(255, 248, 238, .82);
+      box-shadow: 0 16px 32px rgba(70, 45, 20, .08);
+    }
+
+    .calc-group + .calc-group { margin-top: clamp(18px, 2vw, 26px); }
+
+    .calc-label {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 12px;
+      color: var(--ink);
+      font-size: clamp(14px, 1.05vw, 16px);
+      line-height: 1.2;
+      font-weight: 900;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+
+    .calc-label span {
+      color: var(--ink-soft);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .03em;
+      text-transform: none;
+    }
+
+    .room-options {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .room-option,
+    .guest-option {
+      appearance: none;
+      border: 1px solid rgba(8, 47, 68, .11);
+      background: rgba(255, 243, 228, .58);
+      cursor: pointer;
+      transition: transform .18s ease, background .18s ease, border-color .18s ease, box-shadow .18s ease;
+    }
+
+    .room-option {
+      min-height: 92px;
+      padding: 14px;
+      border-radius: 20px;
+      text-align: left;
+    }
+
+    .room-option strong {
+      display: block;
+      margin-bottom: 6px;
+      color: var(--ink);
+      font-size: clamp(15px, 1.1vw, 18px);
+      line-height: 1.15;
+      font-weight: 900;
+    }
+
+    .room-option span {
+      display: block;
+      color: var(--ink-soft);
+      font-size: 13px;
+      line-height: 1.35;
+      font-weight: 700;
+    }
+
+    .room-option:hover,
+    .room-option:focus-visible,
+    .guest-option:hover,
+    .guest-option:focus-visible {
+      outline: none;
+      transform: translateY(-2px);
+      border-color: rgba(241, 90, 36, .42);
+      box-shadow: 0 10px 18px rgba(70, 45, 20, .08);
+    }
+
+    .room-option.is-active,
+    .guest-option.is-active {
+      color: var(--cream-soft);
+      border-color: transparent;
+      background: var(--footer);
+      box-shadow: 0 14px 24px rgba(8, 47, 68, .16);
+    }
+
+    .room-option.is-active strong { color: #FFF8EE; }
+    .room-option.is-active span { color: rgba(255, 248, 238, .76); }
+
+    .guest-options {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .guest-option {
+      min-width: 74px;
+      min-height: 48px;
+      padding: 10px 16px;
+      border-radius: 999px;
+      color: var(--ink);
+      font-size: 15px;
+      line-height: 1;
+      font-weight: 900;
+    }
+
+    .calc-result {
+      margin-top: clamp(20px, 2.2vw, 30px);
+      padding: clamp(18px, 1.8vw, 26px);
+      border-radius: clamp(22px, 2vw, 30px);
+      color: var(--cream-soft);
+      background:
+        radial-gradient(220px 120px at 88% 8%, rgba(241, 90, 36, .42), transparent 72%),
+        var(--footer);
+      box-shadow: 0 18px 34px rgba(8, 47, 68, .18);
+    }
+
+    .calc-result__label {
+      display: block;
+      margin-bottom: 8px;
+      color: rgba(255, 248, 238, .72);
+      font-size: 13px;
+      line-height: 1;
+      font-weight: 900;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    .calc-result strong {
+      display: block;
+      color: #FFF8EE;
+      font-size: clamp(28px, 3vw, 48px);
+      line-height: 1.02;
+      font-weight: 900;
+      letter-spacing: .01em;
+    }
+
+    .calc-result p {
+      margin: 10px 0 0;
+      color: rgba(255, 248, 238, .82);
+      font-size: clamp(14px, 1.05vw, 18px);
+      line-height: 1.35;
+      font-weight: 700;
+    }
+
+    .calc-note {
+      margin: 12px 0 0;
+      color: rgba(33, 71, 90, .82);
+      font-size: 12px;
+      line-height: 1.45;
+      font-weight: 700;
+    }
+
+    .day-modal {
+      position: fixed;
+      inset: 0;
+      z-index: 40;
+      display: grid;
+      place-items: center;
+      padding: clamp(16px, 3vw, 36px);
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transition: opacity .22s ease, visibility .22s ease;
+    }
+
+    .day-modal.is-open {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+    }
+
+    .day-modal__overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(8, 47, 68, .54);
+      backdrop-filter: blur(8px);
+    }
+
+    .day-modal__dialog {
+      position: relative;
+      z-index: 1;
+      width: min(100%, 1040px);
+      max-height: min(760px, calc(100dvh - 32px));
+      overflow: auto;
+      display: grid;
+      grid-template-columns: minmax(320px, .86fr) minmax(360px, 1fr);
+      gap: clamp(20px, 3vw, 38px);
+      padding: clamp(16px, 2vw, 26px);
+      border: 1px solid rgba(241, 90, 36, .32);
+      border-radius: clamp(28px, 3vw, 44px);
+      background:
+        radial-gradient(480px 260px at 10% 0%, rgba(255,255,255,.74), transparent 76%),
+        var(--cream-soft);
+      box-shadow: 0 34px 86px rgba(0, 0, 0, .28);
+      outline: none;
+    }
+
+    .day-modal__media {
+      min-height: 100%;
+      overflow: hidden;
+      border-radius: clamp(22px, 2.3vw, 34px);
+      background: #F7D7A4;
+      box-shadow: 0 16px 32px rgba(41, 26, 12, .10);
+    }
+
+    .day-modal__media img {
+      width: 100%;
+      height: 100%;
+      min-height: 470px;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .day-modal__content {
+      min-width: 0;
+      padding: clamp(4px, 1vw, 10px) clamp(4px, 1vw, 8px) clamp(4px, 1vw, 10px) 0;
+    }
+
+    .day-modal__close {
+      position: absolute;
+      top: clamp(14px, 1.5vw, 22px);
+      right: clamp(14px, 1.5vw, 22px);
+      z-index: 2;
+      width: 46px;
+      height: 46px;
+      display: grid;
+      place-items: center;
+      appearance: none;
+      border: 1px solid rgba(8, 47, 68, .12);
+      border-radius: 999px;
+      background: rgba(255, 248, 238, .92);
+      cursor: pointer;
+      transition: transform .18s ease, background .18s ease;
+    }
+
+    .day-modal__close:hover,
+    .day-modal__close:focus-visible {
+      outline: none;
+      transform: rotate(8deg) scale(1.04);
+      background: #fff;
+    }
+
+    .day-modal__close svg { width: 19px; height: 19px; stroke: var(--ink); stroke-width: 3; }
+
+    .day-modal__eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin: 0 54px 14px 0;
+      color: var(--orange);
+      font-size: 14px;
+      line-height: 1;
+      font-weight: 900;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+    }
+
+    .day-modal__eyebrow::before {
+      content: "";
+      width: 32px;
+      height: 3px;
+      border-radius: 999px;
+      background: currentColor;
+    }
+
+    .day-modal h3 {
+      margin: 0 54px clamp(12px, 1.5vw, 18px) 0;
+      color: var(--ink);
+      font-size: clamp(30px, 3vw, 48px);
+      line-height: 1;
+      font-weight: 900;
+      letter-spacing: .02em;
+      text-transform: uppercase;
+    }
+
+    .day-modal__intro {
+      margin: 0 0 clamp(16px, 2vw, 24px);
+      color: var(--ink-soft);
+      font-size: clamp(15px, 1.15vw, 19px);
+      line-height: 1.62;
+      font-weight: 600;
+    }
+
+    .day-timeline {
+      display: grid;
+      gap: 10px;
+      margin: 0 0 clamp(18px, 2vw, 26px);
+      padding: 0;
+      list-style: none;
+    }
+
+    .day-timeline li {
+      position: relative;
+      padding: 14px 16px 14px 42px;
+      border: 1px solid rgba(241, 90, 36, .18);
+      border-radius: 18px;
+      background: rgba(255, 243, 228, .62);
+      color: var(--ink-soft);
+      font-size: 14px;
+      line-height: 1.45;
+      font-weight: 700;
+    }
+
+    .day-timeline li::before {
+      content: "";
+      position: absolute;
+      left: 17px;
+      top: 19px;
+      width: 9px;
+      height: 9px;
+      border-radius: 999px;
+      background: var(--orange);
+      box-shadow: 0 0 0 5px rgba(241, 90, 36, .12);
+    }
+
+    .day-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: clamp(18px, 2vw, 26px);
+    }
+
+    .day-chip {
+      padding: 9px 12px;
+      border-radius: 999px;
+      color: var(--ink);
+      background: rgba(241, 90, 36, .10);
+      font-size: 12px;
+      line-height: 1;
+      font-weight: 900;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+    }
+
+    .day-modal__nav {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    .day-modal__nav button {
+      appearance: none;
+      border: 0;
+      border-radius: 999px;
+      padding: 14px 16px;
+      color: var(--cream-soft);
+      background: var(--footer);
+      cursor: pointer;
+      font-size: 14px;
+      line-height: 1;
+      font-weight: 900;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      transition: transform .18s ease, background .18s ease;
+    }
+
+    .day-modal__nav button:last-child { background: var(--orange); }
+    .day-modal__nav button:hover,
+    .day-modal__nav button:focus-visible { outline: none; transform: translateY(-2px); }
+
+    .footer {
+      position: relative;
+      margin: 0;
+      color: #FFF8EE;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,.03), rgba(0,0,0,0)),
+        var(--footer);
+    }
+
+    .footer__wave {
+      display: block;
+      width: 100%;
+      height: clamp(54px, 5vw, 78px);
+      margin-bottom: -1px;
+      background: var(--cream);
+    }
+
+    .footer__wave path:first-child {
+      fill: var(--footer);
+      stroke: none;
+    }
+
+    .footer__wave path:last-child { display: none; }
+
+    .footer__content {
+      position: relative;
+      width: var(--container);
+      min-height: 118px;
+      margin-inline: auto;
+      padding: clamp(18px, 2.2vw, 30px) 0 clamp(26px, 2.6vw, 36px);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: clamp(22px, 3vw, 44px);
+      overflow: hidden;
+    }
+
+    .footer__content::before { content: none; }
+
+    .footer__brand {
+      position: relative;
+      z-index: 1;
+      min-width: 0;
+      display: flex;
+      align-items: center;
+      gap: clamp(18px, 2.2vw, 34px);
+    }
+
+    .footer__logo {
+      width: clamp(170px, 16vw, 260px);
+      height: auto;
+      flex: 0 0 auto;
+      filter: drop-shadow(0 8px 14px rgba(0,0,0,.13));
+    }
+
+    .footer__divider {
+      width: 1px;
+      height: 56px;
+      flex: 0 0 auto;
+      background: rgba(255, 248, 238, .72);
+    }
+
+    .footer__tag {
+      color: rgba(255, 248, 238, .86);
+      font-size: clamp(14px, 1.2vw, 18px);
+      line-height: 1.25;
+      font-weight: 800;
+      letter-spacing: .02em;
+      white-space: nowrap;
+    }
+
+    .socials {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      gap: clamp(16px, 2vw, 28px);
+      flex: 0 0 auto;
+    }
+
+    .socials a {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      min-height: 48px;
+      color: #FFF8EE;
+      font-size: clamp(13px, 1vw, 16px);
+      line-height: 1;
+      font-weight: 900;
+      letter-spacing: .035em;
+      text-transform: uppercase;
+      transition: transform .18s ease, opacity .18s ease;
+    }
+
+    .socials a:hover,
+    .socials a:focus-visible {
+      outline: none;
+      transform: translateY(-2px);
+      opacity: .9;
+    }
+
+    .social-icon {
+      width: clamp(44px, 3.8vw, 58px);
+      height: clamp(44px, 3.8vw, 58px);
+      display: grid;
+      place-items: center;
+      flex: 0 0 auto;
+      border: 1px solid rgba(255, 248, 238, .78);
+      border-radius: 999px;
+    }
+
+    .socials svg {
+      width: 53%;
+      height: 53%;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    @media (min-width: 1720px) {
+      :root { --container: min(calc(100% - 120px), 1660px); }
+      .hero__inner { grid-template-columns: minmax(500px, .82fr) minmax(700px, 1fr); min-height: 780px; }
+      .hero__photo { min-height: 780px; }
+    }
+
+    @media (max-width: 1180px) and (min-width: 761px) {
+      .hero__inner { grid-template-columns: minmax(320px, .88fr) minmax(420px, 1fr); min-height: clamp(520px, 58vw, 640px); }
+      .hero__copy { padding: clamp(28px, 4vw, 44px) clamp(24px, 3vw, 34px) clamp(50px, 5vw, 68px); }
+      .hero__logo { width: clamp(150px, 18vw, 210px); }
+      .hero__title { width: min(100%, clamp(300px, 36vw, 460px)); }
+      .hero__photo { min-height: clamp(520px, 58vw, 640px); }
+      .program__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .includes__grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .calculator { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 900px) and (min-width: 761px) {
+      .footer__content { flex-wrap: wrap; }
+      .socials { width: 100%; justify-content: flex-start; }
+    }
+
+    @media (max-width: 760px) {
+      :root { --container: min(calc(100% - 40px), 520px); }
+
+      .hero {
+        padding: clamp(18px, 6vw, 28px) 0 clamp(38px, 10vw, 56px);
+      }
+
+      .hero__inner {
+        width: var(--container);
+        min-height: 0;
+        display: flex;
+        flex-direction: column;
+        border-radius: clamp(28px, 8vw, 36px);
+      }
+
+      .hero__inner::after {
+        height: 26px;
+        background-size: auto 100%;
+      }
+
+      .hero__copy {
+        width: 100%;
+        align-items: center;
+        text-align: center;
+        padding: clamp(24px, 7vw, 30px) clamp(18px, 5vw, 24px) clamp(20px, 6vw, 26px);
+        background: linear-gradient(180deg, rgba(255,248,238,.98) 0%, rgba(255,248,238,.95) 100%);
+      }
+
+      .hero__logo {
+        width: clamp(166px, 56vw, 238px);
+        margin-bottom: clamp(16px, 5vw, 24px);
+      }
+
+      .hero__title {
+        width: min(100%, clamp(300px, 82vw, 520px));
+      }
+
+      .hero__date {
+        justify-content: center;
+        gap: 12px;
+        margin: clamp(16px, 5vw, 22px) 0 clamp(12px, 4vw, 18px);
+        font-size: clamp(29px, 8vw, 42px);
+      }
+
+      .hero__date::before,
+      .hero__date::after { width: clamp(20px, 8vw, 42px); height: 3px; }
+
+      .hero__kicker {
+        max-width: 360px;
+        font-size: clamp(16px, 4.3vw, 21px);
+        letter-spacing: .05em;
+      }
+
+      .hero__lead {
+        max-width: 390px;
+        font-size: clamp(15px, 4vw, 18px);
+        line-height: 1.62;
+      }
+
+      .hero__visual {
+        width: 100%;
+        min-height: 0;
+      }
+
+      .hero__visual::before {
+        background: linear-gradient(180deg, rgba(255,248,238,.08) 0%, rgba(255,248,238,0) 18%);
+      }
+
+      .hero__visual::after {
+        width: clamp(88px, 28vw, 124px);
+        height: clamp(28px, 9vw, 40px);
+        top: 16px;
+        right: 18px;
+      }
+
+      .hero__photo {
+        min-height: 0;
+        height: clamp(430px, 128vw, 620px);
+      }
+
+      .hero__photo img {
+        object-position: 54% 52%;
+        transform: none;
+      }
+
+      .section--program {
+        padding-block: clamp(40px, 10vw, 62px) clamp(28px, 7vw, 46px);
+      }
+
+      .section--includes {
+        padding-block: clamp(34px, 9vw, 58px) clamp(42px, 9vw, 66px);
+      }
+
+      .section-title {
+        gap: clamp(8px, 2.5vw, 12px);
+        font-size: clamp(30px, 8.1vw, 42px);
+        letter-spacing: .032em;
+      }
+
+      .title-wave { width: clamp(46px, 12vw, 62px); }
+      .section-title__text { white-space: normal; }
+
+      .section--program .container { width: 100%; }
+      .section--program .section-title { padding-inline: 20px; }
+
+      .program__grid {
+        margin-top: clamp(24px, 7vw, 38px);
+        display: grid;
+        grid-auto-flow: column;
+        grid-auto-columns: min(82vw, 430px);
+        grid-template-columns: none;
+        gap: clamp(14px, 4vw, 20px);
+        overflow-x: auto;
+        overscroll-behavior-inline: contain;
+        scroll-snap-type: x mandatory;
+        scrollbar-width: none;
+        padding: 0 max(28px, calc((100vw - 520px) / 2 + 28px)) 14px;
+        scroll-padding-inline: max(28px, calc((100vw - 520px) / 2 + 28px));
+      }
+
+      .program__grid::-webkit-scrollbar { display: none; }
+
+      .program-card {
+        scroll-snap-align: start;
+        padding: clamp(14px, 4vw, 18px);
+        border-radius: clamp(24px, 7vw, 34px);
+        background: rgba(255, 248, 238, .82);
+      }
+
+      .program-card:hover,
+      .program-card:focus-visible { transform: none; }
+
+      .program-card__image {
+        aspect-ratio: 16 / 10;
+        border-radius: clamp(18px, 5vw, 26px);
+      }
+
+      .program-card__body { padding: clamp(18px, 5vw, 24px) 2px 2px; }
+      .program-card__head { align-items: center; margin-bottom: clamp(14px, 4vw, 20px); }
+      .program-card__day { font-size: clamp(21px, 5.8vw, 30px); }
+      .program-card__day span { display: inline; margin-top: 0; margin-left: .24em; }
+      .program-card__icon { width: clamp(52px, 14vw, 72px); height: clamp(50px, 13vw, 68px); }
+      .program-card h3 { font-size: clamp(21px, 5.5vw, 30px); line-height: 1.12; }
+      .program-card p { font-size: clamp(15px, 4vw, 19px); line-height: 1.58; }
+      .program-card__more { font-size: 12px; padding: 9px 13px; }
+
+      .swipe-hint {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        margin: 6px auto 0;
+      }
+
+      .dots { display: flex; align-items: center; justify-content: center; gap: 8px; flex: 0 0 auto; }
+      .dot { width: 9px; height: 9px; border-radius: 999px; background: rgba(8, 47, 68, .22); }
+      .dot.is-active { width: 22px; background: var(--orange); }
+      .hint-arrow { display: none; }
+
+      .includes__grid {
+        margin-top: clamp(24px, 7vw, 38px);
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: clamp(12px, 3.5vw, 16px);
+      }
+
+      .include-item {
+        min-height: clamp(154px, 40vw, 196px);
+        gap: clamp(10px, 3vw, 14px);
+        padding: clamp(16px, 4vw, 22px) clamp(10px, 3vw, 18px);
+        border-radius: clamp(22px, 6vw, 30px);
+      }
+
+      .section--includes .section-title {
+        gap: 8px;
+        font-size: clamp(27px, 7.1vw, 38px);
+      }
+
+      .section--includes .title-wave { width: clamp(42px, 11vw, 56px); }
+      .section--includes .section-title__text { white-space: nowrap; }
+
+      .include-item img {
+        width: clamp(58px, 16vw, 78px);
+        height: clamp(54px, 15vw, 74px);
+        margin-bottom: 0;
+      }
+
+      .include-item strong { font-size: clamp(14px, 3.9vw, 18px); line-height: 1.18; }
+
+      .section--calculator { padding-block: clamp(38px, 9vw, 58px) clamp(52px, 12vw, 76px); }
+
+      .calculator {
+        grid-template-columns: 1fr;
+        padding: clamp(20px, 5vw, 28px);
+        border-radius: clamp(28px, 8vw, 38px);
+      }
+
+      .calculator__title { font-size: clamp(30px, 8vw, 42px); }
+      .room-options { grid-template-columns: 1fr; }
+      .room-option { min-height: auto; }
+      .calc-label { align-items: flex-start; flex-direction: column; gap: 4px; }
+      .guest-option { flex: 1 1 72px; }
+      .calc-result strong { font-size: clamp(27px, 7.2vw, 40px); }
+
+      .day-modal { padding: 10px; align-items: end; }
+
+      .day-modal__dialog {
+        width: 100%;
+        max-height: calc(100dvh - 20px);
+        grid-template-columns: 1fr;
+        gap: 16px;
+        padding: 12px;
+        border-radius: 28px;
+      }
+
+      .day-modal__media { border-radius: 22px; }
+      .day-modal__media img { min-height: 230px; max-height: 330px; }
+      .day-modal__content { padding: 0 4px 6px; }
+      .day-modal__close { width: 42px; height: 42px; }
+      .day-modal h3 { margin-right: 48px; font-size: clamp(27px, 7.4vw, 38px); }
+      .day-modal__eyebrow { margin-right: 48px; }
+      .day-modal__nav { position: sticky; bottom: 0; padding-top: 4px; background: linear-gradient(180deg, rgba(255,248,238,0), var(--cream-soft) 30%); }
+
+      .footer__wave { height: 36px; }
+
+      .footer__content {
+        min-height: 0;
+        padding: 18px 0 24px;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 16px;
+      }
+
+      .footer__brand {
+        display: grid;
+        grid-template-columns: auto 1px 1fr;
+        gap: 14px;
+        align-items: center;
+      }
+
+      .footer__logo { width: clamp(136px, 44vw, 178px); }
+      .footer__divider { height: 46px; }
+      .footer__tag { white-space: normal; font-size: clamp(12px, 3.2vw, 14px); line-height: 1.35; }
+
+      .socials {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+      }
+
+      .socials a {
+        min-width: 0;
+        justify-content: center;
+        gap: 9px;
+        padding: 10px 12px;
+        border: 1px solid rgba(255, 248, 238, .22);
+        border-radius: 999px;
+        background: rgba(255, 248, 238, .06);
+        font-size: clamp(11px, 3vw, 13px);
+      }
+
+      .social-icon { width: 34px; height: 34px; }
+    }
+
+    @media (max-width: 420px) {
+      .section-title {
+        font-size: clamp(28px, 7.9vw, 34px);
+        gap: 8px;
+      }
+      .title-wave { width: 42px; }
+      .hero__date::before,
+      .hero__date::after { display: none; }
+    }
+
+    @media (max-width: 374px) {
+      :root { --container: min(calc(100% - 32px), 520px); }
+      .hero__title { width: min(100%, 286px); }
+      .hero__kicker { font-size: 15px; }
+      .hero__lead { font-size: 14px; }
+      .program__grid {
+        grid-auto-columns: 82vw;
+        padding-inline: 24px;
+        scroll-padding-inline: 24px;
+      }
+      .swipe-hint { margin-inline: 14px; }
+      .section--includes .section-title__text { white-space: normal; }
+      .socials { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <main class="site">
+    <section class="hero" aria-label="APRES SURF ПЛЁС">
+      <div class="hero__inner">
+        <div class="hero__copy">
+          <img class="hero__logo" src="assets/event-logo-round.webp" alt="APRES SURF ПЛЁС — 30.07—02.08" width="900" height="900" fetchpriority="high">
+          <h1 class="hero__title"><img src="assets/brand-lockup.webp" alt="APRES SURF ПЛЁС" width="1011" height="405" fetchpriority="high"></h1>
+          <div class="hero__date" aria-label="Даты проведения">30.07—02.08</div>
+          <p class="hero__kicker">Wake weekend в клубной атмосфере</p>
+          <p class="hero__lead">Четыре дня на воде, в кругу своих людей. <strong>Wake surf</strong>, отдых, забота о себе и атмосферные вечера на берегу Волги.</p>
+        </div>
+
+        <div class="hero__visual" aria-hidden="true">
+          <div class="hero__photo">
+            <img src="assets/hero-ples-photo.webp" alt="" width="1085" height="1450" fetchpriority="high">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--program" id="program">
+      <div class="container">
+        <h2 class="section-title">
+          <span class="title-wave" aria-hidden="true">
+            <svg viewBox="0 0 150 44" role="img"><g fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"><path d="M4 10c12 8 24 8 36 0s24-8 36 0 24 8 36 0 24-8 36 0"/><path d="M18 24c10 7 20 7 30 0s20-7 30 0 20 7 30 0 20-7 30 0"/><path d="M4 38c12 8 24 8 36 0s24-8 36 0 24 8 36 0 24-8 36 0"/></g></svg>
+          </span>
+          <span class="section-title__text">Программа</span>
+          <span class="title-wave" aria-hidden="true">
+            <svg viewBox="0 0 150 44" role="img"><g fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"><path d="M4 10c12 8 24 8 36 0s24-8 36 0 24 8 36 0 24-8 36 0"/><path d="M18 24c10 7 20 7 30 0s20-7 30 0 20 7 30 0 20-7 30 0"/><path d="M4 38c12 8 24 8 36 0s24-8 36 0 24 8 36 0 24-8 36 0"/></g></svg>
+          </span>
+        </h2>
+
+        <div class="program__grid" id="programGrid" aria-label="Карточки программы">
+          <article class="program-card" role="button" tabindex="0" data-day="0" aria-haspopup="dialog">
+            <img class="program-card__image" src="assets/program-day-1.webp" alt="Закатный ужин у воды" loading="lazy" width="1200" height="675">
+            <div class="program-card__body">
+              <div class="program-card__head">
+                <div class="program-card__day">День 1 <span>— 30.07</span></div>
+                <img class="program-card__icon" src="assets/icon-wave.webp" alt="" width="260" height="194">
+              </div>
+              <h3>Заезд и знакомство</h3>
+              <p>Заезд, размещение, welcome drink, ужин и знакомство с группой.</p>
+              <span class="program-card__more">Подробнее</span>
+            </div>
+          </article>
+
+          <article class="program-card" role="button" tabindex="0" data-day="1" aria-haspopup="dialog">
+            <img class="program-card__image" src="assets/program-day-2.webp" alt="Катание на wake surf за катером" loading="lazy" width="1200" height="675">
+            <div class="program-card__body">
+              <div class="program-card__head">
+                <div class="program-card__day">День 2 <span>— 31.07</span></div>
+                <img class="program-card__icon" src="assets/icon-surfer.webp" alt="" width="227" height="260">
+              </div>
+              <h3>День базовой техники</h3>
+              <p>Разминка, тренировки на воде, работа над техникой, обед и видеоразбор.</p>
+              <span class="program-card__more">Подробнее</span>
+            </div>
+          </article>
+
+          <article class="program-card" role="button" tabindex="0" data-day="2" aria-haspopup="dialog">
+            <img class="program-card__image" src="assets/program-day-3.webp" alt="Wake surf на закате" loading="lazy" width="1200" height="675">
+            <div class="program-card__body">
+              <div class="program-card__head">
+                <div class="program-card__day">День 3 <span>— 01.08</span></div>
+                <img class="program-card__icon" src="assets/icon-sunset.webp" alt="" width="260" height="212">
+              </div>
+              <h3>День прогресса</h3>
+              <p>Тренировки на воде, закрепление навыков, закатное катание и финальный ужин.</p>
+              <span class="program-card__more">Подробнее</span>
+            </div>
+          </article>
+
+          <article class="program-card" role="button" tabindex="0" data-day="3" aria-haspopup="dialog">
+            <img class="program-card__image" src="assets/program-day-4.webp" alt="Улица Плёса с видом на церковь" loading="lazy" width="1200" height="675">
+            <div class="program-card__body">
+              <div class="program-card__head">
+                <div class="program-card__day">День 4 <span>— 02.08</span></div>
+                <img class="program-card__icon" src="assets/icon-branch.webp" alt="" width="260" height="234">
+              </div>
+              <h3>Спокойное завершение</h3>
+              <p>Лёгкая зарядка, завтрак, финальные фотографии и выезд.</p>
+              <span class="program-card__more">Подробнее</span>
+            </div>
+          </article>
+        </div>
+
+        <div class="swipe-hint" aria-hidden="true">
+          <div class="dots" id="dots">
+            <span class="dot is-active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--includes" id="includes">
+      <div class="container">
+        <h2 class="section-title">
+          <span class="title-wave" aria-hidden="true">
+            <svg viewBox="0 0 150 44" role="img"><g fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"><path d="M4 10c12 8 24 8 36 0s24-8 36 0 24 8 36 0 24-8 36 0"/><path d="M18 24c10 7 20 7 30 0s20-7 30 0 20 7 30 0 20-7 30 0"/><path d="M4 38c12 8 24 8 36 0s24-8 36 0 24 8 36 0 24-8 36 0"/></g></svg>
+          </span>
+          <span class="section-title__text">Что входит</span>
+          <span class="title-wave" aria-hidden="true">
+            <svg viewBox="0 0 150 44" role="img"><g fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"><path d="M4 10c12 8 24 8 36 0s24-8 36 0 24 8 36 0 24-8 36 0"/><path d="M18 24c10 7 20 7 30 0s20-7 30 0 20 7 30 0 20-7 30 0"/><path d="M4 38c12 8 24 8 36 0s24-8 36 0 24 8 36 0 24-8 36 0"/></g></svg>
+          </span>
+        </h2>
+
+        <div class="includes__grid">
+          <div class="include-item">
+            <img src="assets/icon-wave.webp" alt="" width="260" height="194">
+            <strong>Wake-сессии<br>с тренером</strong>
+          </div>
+          <div class="include-item">
+            <img src="assets/icon-bed.webp" alt="" width="260" height="188">
+            <strong>Проживание<br>премиум-класса</strong>
+          </div>
+          <div class="include-item">
+            <img src="assets/icon-food.webp" alt="" width="168" height="260">
+            <strong>Питание<br>3 раза в день</strong>
+          </div>
+          <div class="include-item">
+            <img src="assets/icon-lotus.webp" alt="" width="260" height="187">
+            <strong>Забота<br>и восстановление</strong>
+          </div>
+          <div class="include-item">
+            <img src="assets/icon-van.webp" alt="" width="260" height="177">
+            <strong>Группа<br>до 8 человек</strong>
+          </div>
+          <div class="include-item">
+            <img src="assets/icon-group.webp" alt="" width="260" height="185">
+            <strong>История города<br>и атмосфера Плёса</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--calculator" id="price">
+      <div class="container">
+        <div class="calculator">
+          <div class="calculator__copy">
+            <div class="calculator__eyebrow">Стоимость участия</div>
+            <h2 class="calculator__title">Калькулятор поездки</h2>
+            <p class="calculator__text">Выберите формат проживания и количество человек. Калькулятор сразу покажет цену за человека и общую стоимость бронирования.</p>
+          </div>
+
+          <div class="price-calc" aria-label="Калькулятор стоимости">
+            <div class="calc-group">
+              <div class="calc-label">Тип номера <span>коммерческая цена</span></div>
+              <div class="room-options" id="roomOptions">
+                <button class="room-option is-active" type="button" data-room="standard">
+                  <strong>Стандарт</strong>
+                  <span>1–2 человека, базовый комфорт</span>
+                </button>
+                <button class="room-option" type="button" data-room="premium">
+                  <strong>Премиум</strong>
+                  <span>1–2 человека, больше пространства</span>
+                </button>
+                <button class="room-option" type="button" data-room="studio">
+                  <strong>Дом-студия</strong>
+                  <span>1–2 человека, отдельный формат</span>
+                </button>
+                <button class="room-option" type="button" data-room="guesthouse">
+                  <strong>Гостевой дом</strong>
+                  <span>1–4 человека, для компании</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="calc-group">
+              <div class="calc-label">Количество человек <span id="guestHint">доступно для выбранного номера</span></div>
+              <div class="guest-options" id="guestOptions"></div>
+            </div>
+
+            <div class="calc-result" aria-live="polite">
+              <span class="calc-result__label">Итоговая стоимость</span>
+              <strong id="calcPerPerson">185 000 ₽ / чел</strong>
+              <p id="calcTotal">Итого за 2 человека: 370 000 ₽</p>
+            </div>
+            <p class="calc-note">Цена указана на человека; итог считается как цена выбранного размещения × количество участников.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="day-modal" id="dayModal" aria-hidden="true">
+      <div class="day-modal__overlay" data-modal-close></div>
+      <section class="day-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="dayModalTitle" tabindex="-1">
+        <button class="day-modal__close" type="button" data-modal-close aria-label="Закрыть подробности дня">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18" fill="none" stroke-linecap="round"/></svg>
+        </button>
+        <div class="day-modal__media">
+          <img id="dayModalImage" src="assets/program-day-1.webp" alt="" width="1200" height="675">
+        </div>
+        <div class="day-modal__content">
+          <div class="day-modal__eyebrow" id="dayModalEyebrow">День 1 — 30.07</div>
+          <h3 id="dayModalTitle">Заезд и знакомство</h3>
+          <p class="day-modal__intro" id="dayModalIntro">Заезд, размещение, welcome drink и спокойный вечер на берегу.</p>
+          <ul class="day-timeline" id="dayModalTimeline"></ul>
+          <div class="day-chips" id="dayModalChips"></div>
+          <div class="day-modal__nav" aria-label="Навигация по дням">
+            <button type="button" id="dayPrev">← Предыдущий</button>
+            <button type="button" id="dayNext">Следующий →</button>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <footer class="footer" id="footer">
+      <svg class="footer__wave" viewBox="0 0 1440 70" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0 38c70-18 140-18 210 0s140 18 210 0 140-18 210 0 140 18 210 0 140-18 210 0 140 18 210 0 140-18 210 0V70H0Z" />
+        <path d="M0 51c70-12 140-12 210 0s140 12 210 0 140-12 210 0 140 12 210 0 140-12 210 0 140 12 210 0 140-12 210 0" />
+      </svg>
+      <div class="footer__content">
+        <div class="footer__brand">
+          <img class="footer__logo" src="assets/footer-logo.webp" alt="APRES SURF ПЛЁС" width="1011" height="362">
+          <span class="footer__divider" aria-hidden="true"></span>
+          <div class="footer__tag">wake weekend</div>
+        </div>
+
+        <div class="socials" aria-label="Социальные сети">
+          <a href="https://t.me/s/plioshiddenrussia?before=3634" target="_blank" rel="noopener" aria-label="Telegram">
+            <span class="social-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M21.5 3.5 3 10.8l7 2.1 2.6 7.6 3.2-5 4.6-11.2z"/><path d="m10 12.9 6.5-5.1"/></svg>
+            </span>
+            <span class="social-label">Telegram</span>
+          </a>
+          <a href="https://www.instagram.com/gorodples/" target="_blank" rel="noopener" aria-label="Instagram">
+            <span class="social-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.8" r=".8" fill="currentColor" stroke="none"/></svg>
+            </span>
+            <span class="social-label">Instagram</span>
+          </a>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    const grid = document.querySelector('#programGrid');
+    const dots = Array.from(document.querySelectorAll('.dot'));
+
+    function updateDots() {
+      if (!grid || !dots.length) return;
+      const card = grid.querySelector('.program-card');
+      if (!card) return;
+      const gap = parseFloat(getComputedStyle(grid).columnGap) || 0;
+      const step = card.getBoundingClientRect().width + gap;
+      const active = Math.max(0, Math.min(dots.length - 1, Math.round(grid.scrollLeft / step)));
+      dots.forEach((dot, index) => dot.classList.toggle('is-active', index === active));
+    }
+
+    grid?.addEventListener('scroll', () => requestAnimationFrame(updateDots), { passive: true });
+    window.addEventListener('resize', updateDots, { passive: true });
+    updateDots();
+
+    const dayDetails = [
+      {
+        day: 'День 1',
+        date: '30.07',
+        title: 'Заезд и знакомство',
+        image: 'assets/program-day-1.webp',
+        alt: 'Закатный ужин у воды',
+        intro: 'Мягкий старт поездки: без спешки заселяемся, знакомимся с командой и настраиваемся на четыре дня воды, спорта и отдыха.',
+        timeline: [
+          '15:00–17:00 — заезд, размещение и короткий брифинг по программе.',
+          '17:30 — welcome drink на берегу и знакомство с группой.',
+          '19:30 — ужин, обсуждение целей по wake surf и планов на утро.'
+        ],
+        chips: ['welcome drink', 'ужин', 'знакомство', 'вид на Волгу']
+      },
+      {
+        day: 'День 2',
+        date: '31.07',
+        title: 'День базовой техники',
+        image: 'assets/program-day-2.webp',
+        alt: 'Катание на wake surf за катером',
+        intro: 'Первый полноценный день на воде: тренер помогает поставить базу, выбрать комфортную стойку и почувствовать волну.',
+        timeline: [
+          'Утро — зарядка, завтрак и подготовка к катанию.',
+          'День — wake-сессии с тренером, работа над стартом и стабильной стойкой.',
+          'После обеда — отдых, восстановление и видеоразбор техники.',
+          'Вечер — спокойный ужин и свободное время в Плёсе.'
+        ],
+        chips: ['тренер', 'wake surf', 'видеоразбор', 'восстановление']
+      },
+      {
+        day: 'День 3',
+        date: '01.08',
+        title: 'День прогресса',
+        image: 'assets/program-day-3.webp',
+        alt: 'Wake surf на закате',
+        intro: 'Закрепляем технику, добавляем новые элементы и выходим на более уверенное катание. Вечером — атмосферный финальный ужин.',
+        timeline: [
+          'Утро — разминка и постановка индивидуальных задач.',
+          'День — тренировки на воде, прогрессия по уровню каждого участника.',
+          'Закат — катание в красивом свете и фото/видео на память.',
+          'Вечер — финальный ужин в клубной атмосфере.'
+        ],
+        chips: ['прогресс', 'закатное катание', 'фото/видео', 'финальный ужин']
+      },
+      {
+        day: 'День 4',
+        date: '02.08',
+        title: 'Спокойное завершение',
+        image: 'assets/program-day-4.webp',
+        alt: 'Улица Плёса с видом на церковь',
+        intro: 'Финальное утро без суеты: лёгкая зарядка, завтрак, обмен впечатлениями и время для последних фотографий.',
+        timeline: [
+          'Утро — лёгкая зарядка или прогулка по Плёсу.',
+          '10:00 — завтрак и финальные фотографии.',
+          '12:00 — сборы, чек-аут и спокойный выезд.'
+        ],
+        chips: ['зарядка', 'завтрак', 'фотографии', 'выезд']
+      }
+    ];
+
+    const modal = document.querySelector('#dayModal');
+    const modalDialog = modal?.querySelector('.day-modal__dialog');
+    const modalImage = document.querySelector('#dayModalImage');
+    const modalEyebrow = document.querySelector('#dayModalEyebrow');
+    const modalTitle = document.querySelector('#dayModalTitle');
+    const modalIntro = document.querySelector('#dayModalIntro');
+    const modalTimeline = document.querySelector('#dayModalTimeline');
+    const modalChips = document.querySelector('#dayModalChips');
+    const prevButton = document.querySelector('#dayPrev');
+    const nextButton = document.querySelector('#dayNext');
+    let currentDay = 0;
+    let lastFocusedElement = null;
+    let touchStartX = 0;
+    let touchStartY = 0;
+
+    function renderDay(index) {
+      currentDay = (index + dayDetails.length) % dayDetails.length;
+      const data = dayDetails[currentDay];
+      if (!data) return;
+
+      modalImage.src = data.image;
+      modalImage.alt = data.alt;
+      modalEyebrow.textContent = `${data.day} — ${data.date}`;
+      modalTitle.textContent = data.title;
+      modalIntro.textContent = data.intro;
+      modalTimeline.innerHTML = data.timeline.map(item => `<li>${item}</li>`).join('');
+      modalChips.innerHTML = data.chips.map(item => `<span class="day-chip">${item}</span>`).join('');
+    }
+
+    function openDayModal(index) {
+      if (!modal) return;
+      lastFocusedElement = document.activeElement;
+      renderDay(index);
+      modal.classList.add('is-open');
+      modal.setAttribute('aria-hidden', 'false');
+      document.body.classList.add('modal-open');
+      window.setTimeout(() => modalDialog?.focus(), 30);
+    }
+
+    function closeDayModal() {
+      if (!modal) return;
+      modal.classList.remove('is-open');
+      modal.setAttribute('aria-hidden', 'true');
+      document.body.classList.remove('modal-open');
+      if (lastFocusedElement && typeof lastFocusedElement.focus === 'function') {
+        lastFocusedElement.focus();
+      }
+    }
+
+    document.querySelectorAll('.program-card').forEach(card => {
+      card.addEventListener('click', () => openDayModal(Number(card.dataset.day || 0)));
+      card.addEventListener('keydown', event => {
+        if (event.key === 'Enter' || event.key === ' ') {
+          event.preventDefault();
+          openDayModal(Number(card.dataset.day || 0));
+        }
+      });
+    });
+
+    document.querySelectorAll('[data-modal-close]').forEach(element => {
+      element.addEventListener('click', closeDayModal);
+    });
+
+    prevButton?.addEventListener('click', () => renderDay(currentDay - 1));
+    nextButton?.addEventListener('click', () => renderDay(currentDay + 1));
+
+    document.addEventListener('keydown', event => {
+      if (!modal?.classList.contains('is-open')) return;
+      if (event.key === 'Escape') closeDayModal();
+      if (event.key === 'ArrowLeft') renderDay(currentDay - 1);
+      if (event.key === 'ArrowRight') renderDay(currentDay + 1);
+    });
+
+    modalDialog?.addEventListener('touchstart', event => {
+      const touch = event.changedTouches[0];
+      touchStartX = touch.clientX;
+      touchStartY = touch.clientY;
+    }, { passive: true });
+
+    modalDialog?.addEventListener('touchend', event => {
+      const touch = event.changedTouches[0];
+      const deltaX = touch.clientX - touchStartX;
+      const deltaY = touch.clientY - touchStartY;
+      if (Math.abs(deltaX) > 58 && Math.abs(deltaX) > Math.abs(deltaY) * 1.25) {
+        renderDay(deltaX < 0 ? currentDay + 1 : currentDay - 1);
+      }
+    }, { passive: true });
+
+    const priceData = {
+      standard: {
+        title: 'Стандарт',
+        prices: { 1: 230000, 2: 185000 }
+      },
+      premium: {
+        title: 'Премиум',
+        prices: { 1: 240000, 2: 190000 }
+      },
+      studio: {
+        title: 'Дом-студия',
+        prices: { 1: 295000, 2: 220000 }
+      },
+      guesthouse: {
+        title: 'Гостевой дом',
+        prices: { 1: 345000, 2: 245000, 3: 210000, 4: 195000 }
+      }
+    };
+
+    const roomButtons = Array.from(document.querySelectorAll('.room-option'));
+    const guestOptions = document.querySelector('#guestOptions');
+    const calcPerPerson = document.querySelector('#calcPerPerson');
+    const calcTotal = document.querySelector('#calcTotal');
+    const guestHint = document.querySelector('#guestHint');
+    let activeRoom = 'standard';
+    let activeGuests = 2;
+
+    function formatRoubles(value) {
+      return `${new Intl.NumberFormat('ru-RU').format(value)} ₽`;
+    }
+
+    function personWord(count) {
+      return count === 1 ? 'человека' : 'человека';
+    }
+
+    function renderGuestOptions() {
+      const room = priceData[activeRoom];
+      const guests = Object.keys(room.prices).map(Number);
+      if (!guests.includes(activeGuests)) activeGuests = guests.includes(2) ? 2 : guests[0];
+      guestOptions.innerHTML = guests.map(count => `
+        <button class="guest-option ${count === activeGuests ? 'is-active' : ''}" type="button" data-guests="${count}">
+          ${count} ${count === 1 ? 'чел' : 'чел'}
+        </button>
+      `).join('');
+      guestHint.textContent = guests.length > 1 ? `доступно: ${guests.join(', ')}` : 'только один вариант';
+      guestOptions.querySelectorAll('.guest-option').forEach(button => {
+        button.addEventListener('click', () => {
+          activeGuests = Number(button.dataset.guests);
+          updateCalculator();
+        });
+      });
+    }
+
+    function updateCalculator() {
+      const room = priceData[activeRoom];
+      renderGuestOptions();
+      roomButtons.forEach(button => button.classList.toggle('is-active', button.dataset.room === activeRoom));
+      guestOptions.querySelectorAll('.guest-option').forEach(button => {
+        button.classList.toggle('is-active', Number(button.dataset.guests) === activeGuests);
+      });
+      const perPerson = room.prices[activeGuests];
+      const total = perPerson * activeGuests;
+      calcPerPerson.textContent = `${formatRoubles(perPerson)} / чел`;
+      calcTotal.textContent = `Итого за ${activeGuests} ${personWord(activeGuests)}: ${formatRoubles(total)}`;
+    }
+
+    roomButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        activeRoom = button.dataset.room;
+        updateCalculator();
+      });
+    });
+
+    updateCalculator();
+  </script>
+</body>
+</html>
